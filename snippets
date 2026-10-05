@@ -1,0 +1,30 @@
+# Get Product
+from sellix import Sellix
+
+client = Sellix("<YOUR_API_KEY>", "<MERCHANT_NAME>")
+product_uniqid = "<PRODUCT_UNIQID>"
+
+try:
+  product = client.get_product(product_uniqid)
+except Sellix.SellixException as e:
+  print(e)
+
+# Edit Product
+from sellix import Sellix
+
+client = Sellix("<YOUR_API_KEY>", "<MERCHANT_NAME>")
+product_uniqid = "<PRODUCT_UNIQID>"
+product_payload = {
+  "title": "Software Activation Keys",
+  "price": 12.5,
+  "description": "Product description example.",
+  "currency": "EUR",
+  "gateways": ["PAYPAL", "STRIPE", "BITCOIN"],
+  "type": "SERIALS",
+  "serials": ["activation-key-#1"]
+}
+
+try:
+  client.update_product(product_uniqid, **product_payload)
+except Sellix.SellixException as e:
+  print(e)
