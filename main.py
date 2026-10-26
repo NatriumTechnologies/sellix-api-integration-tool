@@ -1,12 +1,13 @@
 from sellix import Sellix
 import requests
 
+# EDIT: THIS IS NO LONGER IN DATE, SELLIX HAS HAD LEGAL TROUBLE AND IS NO LONGER ACTIVELY IN OPERATION
 API_KEY = "example_api_key_placeholder"
-merchant_name = "SiegesMM2Shop"
+merchant_name = "MERCHANT"
 
 client = Sellix(API_KEY, merchant_name)
 # dont run yet
-product_uniqid = "64a78445c612c"
+product_uniqid = "ID"
 product_payload = {
   "title": "TEST PRODUCT",
   "price": 7,
